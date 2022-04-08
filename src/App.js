@@ -7,7 +7,7 @@ function App(){
 }
 
 // eslint-disable-next-line import/no-anonymous-default-export
-export default (_props) => (
+export default () => (
   <Scene style={{ width: '70vw', height: '90vh' }} 
       mapProperties={{ basemap: 'satellite' }}
       viewProperties={{
