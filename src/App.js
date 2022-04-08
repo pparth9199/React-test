@@ -11,13 +11,4 @@ function App(){
 );
 }
 
-export default (props) => (
-  <Scene style={{ width: '70vw', height: '90vh' }} 
-      mapProperties={{ basemap: 'satellite' }}
-      viewProperties={{
-          center: [-118.28538,34.0205],
-          zoom: 15
-      }}>
-      <Campus />
-  </Scene>
-)
+export default App;
