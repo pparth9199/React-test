@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React from 'react';
+import * as ReactDOM from 'react-dom';
+import { Scene,WebMap,WebScene,Map } from '@esri/react-arcgis';
+import Campus from './campus'; 
+function App(){
+  ReactDOM.render(
+    
+        <Scene />
+   ,
+  document.getElementById('root')
+);
 }
 
-export default App;
+export default (props) => (
+  <Scene style={{ width: '70vw', height: '90vh' }} 
+      mapProperties={{ basemap: 'satellite' }}
+      viewProperties={{
+          center: [-118.28538,34.0205],
+          zoom: 15
+      }}>
+      <Campus />
+  </Scene>
+)
